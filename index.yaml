@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  kwetter-web:
+  - apiVersion: v2
+    appVersion: "0.1"
+    created: "2023-05-07T20:18:36.290538039+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 5547bbb1db3aadc939d19e82657cd0ce2a04c7952a4fa38cd1c7c9166968aa2a
+    name: kwetter-web
+    type: application
+    urls:
+    - kwetter-web-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-05-07T20:18:36.289932857+02:00"

@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -c -f docker-compose-cloud.yml -o kweeter
+    kompose.version: 1.28.0 (c4137012e)
+  labels:
+    io.kompose.service: {{ .Release.Name }}
+  name: {{ .Release.Name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: {{ .Release.Name }}
+  strategy: { }
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -c -f docker-compose-cloud.yml -o kweeter
+        kompose.version: 1.28.0 (c4137012e)
+      labels:
+        io.kompose.service: {{ .Release.Name }}
+    spec:
+      containers:
+        - env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: {{ .Values.environment }}
+            - name: MONGODB_COLLECTION
+              value: {{ .Values.mongo.collection }}
+            - name: MONGODB_CONNECTION
+              value: mongodb://{{.Release.Name }}-mongo:27017/
+            - name: MONGODB_DATABASE
+              value: {{ .Values.mongo.database }}
+            - name: RABBITMQ_HOST
+              value: {{ .Values.rabbitmq.host }}
+            - name: RABBITMQ_PORT
+              value: {{ .Values.rabbitmq.port }}
+            - name: RABBITMQ_USERNAME
+              value: {{ .Values.rabbitmq.user }}
+            - name: RABBITMQ_PASSWORD
+              value: {{ .Values.rabbitmq.password }}
+            - name: RABBITMQ_VIRTUAL_HOST
+              value: {{ .Values.rabbitmq.virtualHost }}
+          image: fontyssa/kweeter
+          name: {{ .Release.Name }}
+          resources: { }
+      restartPolicy: Always

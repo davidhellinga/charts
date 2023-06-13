@@ -1,0 +1,13 @@
+# .NET environment
+environment: Development
+
+# Service bus config
+rabbitmq:
+  host: rabbitmq
+
+mongo:
+  collection: kweets
+  database: cache
+
+redis:
+  instance: cache

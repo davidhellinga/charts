@@ -1,5 +1,5 @@
-name: kwetter-api
-description: Gateway API for Kwetter
+name: tag-service
+description: Tag service for Kwetter
 version: 0.0.1
 apiVersion: v1
 keywords:

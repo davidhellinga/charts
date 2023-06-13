@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -c -f docker-compose-cloud.yml -o kweeter
+    kompose.version: 1.28.0 (c4137012e)
+  labels:
+    io.kompose.service: {{ .Release.Name }}-redis-commander
+  name: {{ .Release.Name }}-redis-commander
+spec:
+  ports:
+    - name: "8013"
+      port: 8013
+      targetPort: 8081
+  selector:
+    io.kompose.service: {{ .Release.Name }}-redis-commander
+

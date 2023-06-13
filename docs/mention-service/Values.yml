@@ -1,0 +1,12 @@
+# .NET environment
+environment: Development
+
+# Configuration for Yugabyte connection
+yugabyte:
+  host: ""
+  user: ""
+  password: ""
+
+# Service bus config
+rabbitmq:
+  host: rabbitmq

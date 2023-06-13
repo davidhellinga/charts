@@ -1,5 +1,5 @@
-name: kwetter-api
-description: Gateway API for Kwetter
+name: metadata-service
+description: Metadata service for Kwetter
 version: 0.0.1
 apiVersion: v1
 keywords:

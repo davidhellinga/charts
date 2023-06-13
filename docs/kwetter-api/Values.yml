@@ -1,0 +1,18 @@
+# .NET environment
+environment: Development
+
+# Service bus config
+rabbitmq:
+  host: rabbitmq
+
+# Keycloak config for authentication
+keycloak:
+  authServerUrl: http://keycloak:8080/
+  realm: Kwetter
+  resource: test-client
+  credentials:
+    secret: ""
+  confidentialPort: "0"
+  sslRequired: none
+  verifyTokenAudience: "true"
+  rolesSource: Realm

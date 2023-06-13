@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -c -f docker-compose-cloud.yml -o kweeter
+    kompose.version: 1.28.0 (c4137012e)
+  labels:
+    io.kompose.service: {{ .Release.Name }}
+  name: {{ .Release.Name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: {{ .Release.Name }}
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -c -f docker-compose-cloud.yml -o kweeter
+        kompose.version: 1.28.0 (c4137012e)
+      labels:
+        
+        io.kompose.service: {{ .Release.Name }}
+    spec:
+      containers:
+        - env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: {{ .Values.environment }}
+            - name: DATABASE
+              value: {{ .Release.Name }}
+            - name: RABBITMQ_HOST
+              value: {{ .Values.rabbitmq.host }}
+            - name: ROOT_CERT
+              value: /cert/root.crt
+            - name: YUGABYE_HOST
+              valueFrom:
+                secretKeyRef:
+                  key: host
+                  name: {{ .Release.Name }}-yugabyte
+            - name: YUGABYE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: username
+                  name: {{ .Release.Name }}-yugabyte
+            - name: YUGABYE_USER
+              valueFrom:
+                secretKeyRef:
+                  key: password
+                  name: {{ .Release.Name }}-yugabyte
+          image: fontyssa/kwetter-mention-service
+          name: {{ .Release.Name }}
+          resources: {}
+      restartPolicy: Always

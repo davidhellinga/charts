@@ -1,0 +1,8 @@
+name: cache-service
+description: Read caching service for Kwetter
+version: 0.0.1
+apiVersion: v2
+keywords:
+  - kweeter
+  - kwetter
+appVersion: 0.1

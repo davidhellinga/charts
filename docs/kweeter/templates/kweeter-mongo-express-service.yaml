@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -c -f docker-compose-cloud.yml -o kweeter
+    kompose.version: 1.28.0 (c4137012e)
+  labels:
+    io.kompose.service: {{ .Release.Name }}-mongo-express
+  name: {{ .Release.Name }}-mongo-express
+spec:
+  ports:
+    - name: "8081"
+      port: 8081
+      targetPort: 8081
+  selector:
+    io.kompose.service: {{ .Release.Name }}-mongo-express
+

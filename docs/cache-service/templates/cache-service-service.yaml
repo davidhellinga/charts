@@ -9,9 +9,9 @@ metadata:
   name: {{ .Release.Name }}
 spec:
   ports:
-    - name: "5001"
-      port: 5001
-      targetPort: 80
+    - name: "8080"
+      port: 8080
+      targetPort: 8080
   selector:
     io.kompose.service: {{ .Release.Name }}
 

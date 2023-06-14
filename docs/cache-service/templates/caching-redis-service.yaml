@@ -5,8 +5,8 @@ metadata:
     kompose.cmd: kompose convert -c -f docker-compose-cloud.yml -o kweeter
     kompose.version: 1.28.0 (c4137012e)
   labels:
-    io.kompose.service: {{ .Release.Name }}-redis
-  name: {{ .Release.Name }}-redis
+    io.kompose.service: {{ .Values.serviceName }}-redis
+  name: {{ .Values.serviceName }}-redis
 spec:
   ports:
     - name: "6379"
@@ -16,5 +16,5 @@ spec:
       port: 6379
       targetPort: 6379
   selector:
-    io.kompose.service: {{ .Release.Name }}-redis
+    io.kompose.service: {{ .Values.serviceName }}-redis
 

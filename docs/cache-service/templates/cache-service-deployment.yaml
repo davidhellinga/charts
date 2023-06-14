@@ -5,13 +5,13 @@ metadata:
     kompose.cmd: kompose convert -c -f docker-compose-cloud.yml -o kweeter
     kompose.version: 1.28.0 (c4137012e)
   labels:
-    io.kompose.service: {{ .Release.Name }}
-  name: {{ .Release.Name }}
+    io.kompose.service: {{ .Values.serviceName }}
+  name: {{ .Values.serviceName }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: {{ .Release.Name }}
+      io.kompose.service: {{ .Values.serviceName }}
   strategy: {}
   template:
     metadata:
@@ -20,14 +20,14 @@ spec:
         kompose.version: 1.28.0 (c4137012e)
       labels:
 
-        io.kompose.service: {{ .Release.Name }}
+        io.kompose.service: {{ .Values.serviceName }}
     spec:
       containers:
         - env:
             - name: ASPNETCORE_ENVIRONMENT
               value: {{ .Values.environment }}
             - name: MONGO_CONNECTION
-              value: mongodb://{{ .Release.Name }}-mongo:27017
+              value: mongodb://{{ .Values.serviceName }}-mongo:27017
             - name: MONGO_DATABASE
               value: {{ .Values.mongo.database }}
             - name: MONGO_COLLECTION
@@ -35,11 +35,11 @@ spec:
             - name: RABBITMQ_HOST
               value: {{ .Values.rabbitmq.host }}
             - name: REDIS_CONFIG
-              value: {{ .Release.Name }}-redis
+              value: {{ .Values.serviceName }}-redis
             - name: REDIS_INSTANCE
               value: {{ .Values.redis.instance }}
           image: fontyssa/kwetter-cache-service
-          name: {{ .Release.Name }}
+          name: {{ .Values.serviceName }}
           ports:
             - containerPort: 80
           resources: {}

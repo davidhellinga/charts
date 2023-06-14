@@ -5,13 +5,13 @@ metadata:
     kompose.cmd: kompose convert -c -f docker-compose-cloud.yml -o kweeter
     kompose.version: 1.28.0 (c4137012e)
   labels:
-    io.kompose.service: {{ .Release.Name }}-mongo-express
-  name: {{ .Release.Name }}-mongo-express
+    io.kompose.service: {{ .Values.serviceName }}-mongo-express
+  name: {{ .Values.serviceName }}-mongo-express
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: {{ .Release.Name }}-mongo-express
+      io.kompose.service: {{ .Values.serviceName }}-mongo-express
   strategy: {}
   template:
     metadata:
@@ -20,14 +20,14 @@ spec:
         kompose.version: 1.28.0 (c4137012e)
       labels:
 
-        io.kompose.service: {{ .Release.Name }}-mongo-express
+        io.kompose.service: {{ .Values.serviceName }}-mongo-express
     spec:
       containers:
         - env:
             - name: ME_CONFIG_MONGODB_SERVER
-              value: {{ .Release.Name }}-mongo
+              value: {{ .Values.serviceName }}-mongo
           image: mongo-express
-          name: {{ .Release.Name }}-mongo-express
+          name: {{ .Values.serviceName }}-mongo-express
           ports:
             - containerPort: 8081
           resources: {}

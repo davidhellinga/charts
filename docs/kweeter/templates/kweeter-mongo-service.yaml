@@ -5,13 +5,13 @@ metadata:
     kompose.cmd: kompose convert -c -f docker-compose-cloud.yml -o kweeter
     kompose.version: 1.28.0 (c4137012e)
   labels:
-    io.kompose.service: {{ .Release.Name }}-mongo
-  name: {{ .Release.Name }}-mongo
+    io.kompose.service: {{ .Values.serviceName }}-mongo
+  name: {{ .Values.serviceName }}-mongo
 spec:
   ports:
     - name: "27017"
       port: 27017
       targetPort: 27017
   selector:
-    io.kompose.service: {{ .Release.Name }}-mongo
+    io.kompose.service: {{ .Values.serviceName }}-mongo
 

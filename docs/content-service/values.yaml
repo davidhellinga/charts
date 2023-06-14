@@ -1,6 +1,8 @@
 # .NET environment
 environment: Development
 
+serviceName: content-service
+
 # Configuration for Yugabyte connection
 yugabyte:
   host: ""

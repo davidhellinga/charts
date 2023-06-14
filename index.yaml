@@ -2,119 +2,101 @@ apiVersion: v1
 entries:
   cache-service:
   - apiVersion: v2
-    appVersion: "0.1"
-    created: "2023-06-13T21:31:26.871016689+02:00"
-    description: Read caching service for Kwetter
-    digest: 0bb6bac96dd356d6f552a7dce0aeb20a014de0397a92ef9c5408fe68bcc2426d
-    keywords:
-    - kweeter
-    - kwetter
+    appVersion: 1.16.0
+    created: "2023-06-14T14:35:34.705279759+02:00"
+    description: The Cache Service for Kwetter
+    digest: 59522f2f947abac431f781be410c809cdc773038d60b92f8daf20bb22a0653e5
     name: cache-service
+    type: application
     urls:
-    - https://davidhellinga.github.io/charts/docs/cache-service-0.0.1.tgz
-    version: 0.0.1
+    - https://groep2rekeningrijden.github.io/charts/docs/cache-service-0.1.0.tgz
+    version: 0.1.0
   content-service:
-  - apiVersion: v1
-    appVersion: "0.1"
-    created: "2023-06-13T21:31:26.878102865+02:00"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-06-14T14:35:34.705478118+02:00"
     description: Content link service for Kwetter
-    digest: bae95f4adfa2a9ed313e4ba597553a61f0d52f8a48e0a253730c863b4bce178b
-    keywords:
-    - kweeter
-    - kwetter
+    digest: 3fd284098aea2f19428d9fe8b7cca81b3a3647f9ccc5b2c3e3a67547c3387e52
     name: content-service
+    type: application
     urls:
-    - https://davidhellinga.github.io/charts/docs/content-service-0.0.1.tgz
-    version: 0.0.1
+    - https://groep2rekeningrijden.github.io/charts/docs/content-service-0.1.0.tgz
+    version: 0.1.0
   kweeter:
-  - apiVersion: v1
-    appVersion: "0.1"
-    created: "2023-06-13T21:31:26.878466263+02:00"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-06-14T14:35:34.705714348+02:00"
     description: Kweeter write orchestrator for Kwetter
-    digest: e48ce44b84949cf17b70f65bea493d8a3683e135dd29b32459b891f770c73e1a
-    keywords:
-    - kweeter
-    - kwetter
+    digest: 73728ef94d96cf13b893b5b28e857995d70a039625b2b51eaab8ded2a5b36f47
     name: kweeter
+    type: application
     urls:
-    - https://davidhellinga.github.io/charts/docs/kweeter-0.0.1.tgz
-    version: 0.0.1
+    - https://groep2rekeningrijden.github.io/charts/docs/kweeter-0.1.0.tgz
+    version: 0.1.0
   kwetter-api:
-  - apiVersion: v1
-    appVersion: "0.1"
-    created: "2023-06-13T21:31:26.878604677+02:00"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-06-14T14:35:34.705941729+02:00"
     description: Gateway API for Kwetter
-    digest: be1d433b710f75b2dedf23ac26e2cbe7e17887534cd8e5e2017ff30ed6ab2096
-    keywords:
-    - kweeter
-    - kwetter
+    digest: 17e1818f5710f68235da462bf31e947adc1fb531775926939e9d5e23193d0ba6
     name: kwetter-api
+    type: application
     urls:
-    - https://davidhellinga.github.io/charts/docs/kwetter-api-0.0.1.tgz
-    version: 0.0.1
+    - https://groep2rekeningrijden.github.io/charts/docs/kwetter-api-0.1.0.tgz
+    version: 0.1.0
   kwetter-data-service:
-  - apiVersion: v1
-    appVersion: "0.1"
-    created: "2023-06-13T21:31:26.878929751+02:00"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-06-14T14:35:34.706130444+02:00"
     description: Kweet data service for Kwetter
-    digest: f77572bd10c57d3fbeff2341522bedf21d64cfb77d8674733397eae5a1ca662c
-    keywords:
-    - kweeter
-    - kwetter
+    digest: f8610200e7895e4f15b99e66315454b458631c274fbff0e0b8b47d66856498b7
     name: kwetter-data-service
+    type: application
     urls:
-    - https://davidhellinga.github.io/charts/docs/kwetter-data-service-0.0.1.tgz
-    version: 0.0.1
+    - https://groep2rekeningrijden.github.io/charts/docs/kwetter-data-service-0.1.0.tgz
+    version: 0.1.0
   kwetter-web:
-  - apiVersion: v1
-    appVersion: "0.1"
-    created: "2023-06-13T21:31:26.879224014+02:00"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-06-14T14:35:34.706284393+02:00"
     description: Kwetter, the website
-    digest: 5e6edc28870bb58a7d138fb65bb2e8dfc8c9d629df9fe503011154d6dfc5d32c
-    keywords:
-    - kweeter
-    - kwetter
+    digest: 37ab53fa0d0e7b224bfa33b43b5326cc7533090c33e06eab444beef9ac32704d
     name: kwetter-web
+    type: application
     urls:
-    - https://davidhellinga.github.io/charts/docs/kwetter-web-0.0.1.tgz
-    version: 0.0.1
+    - https://groep2rekeningrijden.github.io/charts/docs/kwetter-web-0.1.0.tgz
+    version: 0.1.0
   mention-service:
-  - apiVersion: v1
-    appVersion: "0.1"
-    created: "2023-06-13T21:31:26.879447751+02:00"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-06-14T14:35:34.70650007+02:00"
     description: Mention service for Kwetter
-    digest: 75ba7ea558a6ce2134fcc7a0fb0d6122b67194816cbcd08e5afc303a35902892
-    keywords:
-    - kweeter
-    - kwetter
+    digest: b1508f14ce151f61bb593d51656981fe4eedc8b68f24a2e12283977d04473cd4
     name: mention-service
+    type: application
     urls:
-    - https://davidhellinga.github.io/charts/docs/mention-service-0.0.1.tgz
-    version: 0.0.1
+    - https://groep2rekeningrijden.github.io/charts/docs/mention-service-0.1.0.tgz
+    version: 0.1.0
   metadata-service:
-  - apiVersion: v1
-    appVersion: "0.1"
-    created: "2023-06-13T21:31:26.879672801+02:00"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-06-14T14:35:34.706710457+02:00"
     description: Metadata service for Kwetter
-    digest: 7451b03b13da5f91c114d707455e57bee8938bbbcc5de9c49cb2de3e566cb286
-    keywords:
-    - kweeter
-    - kwetter
+    digest: ef845555b224e5ed941a32bc4985738799d14903660d4c692d97cf0899ae19f2
     name: metadata-service
+    type: application
     urls:
-    - https://davidhellinga.github.io/charts/docs/metadata-service-0.0.1.tgz
-    version: 0.0.1
+    - https://groep2rekeningrijden.github.io/charts/docs/metadata-service-0.1.0.tgz
+    version: 0.1.0
   tag-service:
-  - apiVersion: v1
-    appVersion: "0.1"
-    created: "2023-06-13T21:31:26.879883295+02:00"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-06-14T14:35:34.706910407+02:00"
     description: Tag service for Kwetter
-    digest: 560f15373b5c8ca74da14b2a4a1b346ab67d3dd4c01ebf4e84c742e582da575f
-    keywords:
-    - kweeter
-    - kwetter
+    digest: 8c1445e8f26590d2062bff4576a23a12bf48e2e4ca5c9b95615c2f638a6d5dc4
     name: tag-service
+    type: application
     urls:
-    - https://davidhellinga.github.io/charts/docs/tag-service-0.0.1.tgz
-    version: 0.0.1
-generated: "2023-06-13T21:31:26.870635384+02:00"
+    - https://groep2rekeningrijden.github.io/charts/docs/tag-service-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-06-14T14:35:34.704867828+02:00"

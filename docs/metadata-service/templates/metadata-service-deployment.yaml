@@ -5,13 +5,13 @@ metadata:
     kompose.cmd: kompose convert -c -f docker-compose-cloud.yml -o kweeter
     kompose.version: 1.28.0 (c4137012e)
   labels:
-    io.kompose.service: {{ .Release.Name }}
-  name: {{ .Release.Name }}
+    io.kompose.service: {{ .Values.serviceName }}
+  name: {{ .Values.serviceName }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: {{ .Release.Name }}
+      io.kompose.service: {{ .Values.serviceName }}
   strategy: {}
   template:
     metadata:
@@ -20,14 +20,14 @@ spec:
         kompose.version: 1.28.0 (c4137012e)
       labels:
         
-        io.kompose.service: {{ .Release.Name }}
+        io.kompose.service: {{ .Values.serviceName }}
     spec:
       containers:
         - env:
             - name: ASPNETCORE_ENVIRONMENT
               value: {{ .Values.environment }}
             - name: DATABASE
-              value: {{ .Release.Name }}
+              value: {{ .Values.serviceName }}
             - name: RABBITMQ_HOST
               value: {{ .Values.rabbitmq.host }}
             - name: ROOT_CERT
@@ -36,18 +36,18 @@ spec:
               valueFrom:
                 secretKeyRef:
                   key: host
-                  name: {{ .Release.Name }}-yugabyte
+                  name: {{ .Values.serviceName }}-yugabyte
             - name: YUGABYE_PASSWORD
               valueFrom:
                 secretKeyRef:
                   key: username
-                  name: {{ .Release.Name }}-yugabyte
+                  name: {{ .Values.serviceName }}-yugabyte
             - name: YUGABYE_USER
               valueFrom:
                 secretKeyRef:
                   key: password
-                  name: {{ .Release.Name }}-yugabyte
+                  name: {{ .Values.serviceName }}-yugabyte
           image: fontyssa/kwetter-metadata-service
-          name: {{ .Release.Name }}
+          name: {{ .Values.serviceName }}
           resources: {}
       restartPolicy: Always

@@ -5,13 +5,13 @@ metadata:
     kompose.cmd: kompose convert -c -f docker-compose-cloud.yml -o kweeter
     kompose.version: 1.28.0 (c4137012e)
   labels:
-    io.kompose.service: {{ .Release.Name }}
-  name: {{ .Release.Name }}
+    io.kompose.service: {{ .Values.serviceName }}
+  name: {{ .Values.serviceName }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: {{ .Release.Name }}
+      io.kompose.service: {{ .Values.serviceName }}
   strategy: { }
   template:
     metadata:
@@ -20,14 +20,14 @@ spec:
         kompose.version: 1.28.0 (c4137012e)
       labels:
 
-        io.kompose.service: {{ .Release.Name }}
+        io.kompose.service: {{ .Values.serviceName }}
     spec:
       containers:
         - env:
             - name: ASPNETCORE_ENVIRONMENT
               value: {{ .Values }}
             - name: CACHE_URI
-              value: https://{{ .Release.Name }}/
+              value: https://{{ .Values.serviceName }}/
             - name: Keycloak__RolesSource
               value: {{ .Values.keycloak.rolesSource }}
             - name: Keycloak__auth-server-url
@@ -38,7 +38,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   key: secret
-                  name: {{ .Release.Name }}-keycloak
+                  name: {{ .Values.serviceName }}-keycloak
             - name: Keycloak__realm
               value: {{ .Values.keycloak.realm }}
             - name: Keycloak__resource
@@ -50,7 +50,7 @@ spec:
             - name: RABBITMQ_HOST
               value: {{ .Values.rabbitmq.host }}
           image: fontyssa/kwetter-api
-          name: {{ .Release.Name }}
+          name: {{ .Values.serviceName }}
           ports:
             - containerPort: 8080
           resources: { }

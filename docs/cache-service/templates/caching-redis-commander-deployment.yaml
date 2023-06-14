@@ -5,13 +5,13 @@ metadata:
     kompose.cmd: kompose convert -c -f docker-compose-cloud.yml -o kweeter
     kompose.version: 1.28.0 (c4137012e)
   labels:
-    io.kompose.service: {{ .Release.Name }}-redis-commander
-  name: {{ .Release.Name }}-redis-commander
+    io.kompose.service: {{ .Values.serviceName }}-redis-commander
+  name: {{ .Values.serviceName }}-redis-commander
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: {{ .Release.Name }}-redis-commander
+      io.kompose.service: {{ .Values.serviceName }}-redis-commander
   strategy: {}
   template:
     metadata:
@@ -20,14 +20,14 @@ spec:
         kompose.version: 1.28.0 (c4137012e)
       labels:
 
-        io.kompose.service: {{ .Release.Name }}-redis-commander
+        io.kompose.service: {{ .Values.serviceName }}-redis-commander
     spec:
       containers:
         - env:
             - name: REDIS_HOSTS
-              value: {{ .Release.Name }}-redis
+              value: {{ .Values.serviceName }}-redis
           image: rediscommander/redis-commander:latest
-          name: {{ .Release.Name }}-redis-commander
+          name: {{ .Values.serviceName }}-redis-commander
           ports:
             - containerPort: 8081
           resources: {}

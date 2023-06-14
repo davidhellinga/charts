@@ -5,13 +5,13 @@ metadata:
     kompose.cmd: kompose convert -c -f docker-compose-cloud.yml -o kweeter
     kompose.version: 1.28.0 (c4137012e)
   labels:
-    io.kompose.service: {{ .Release.Name }}-mongo
-  name: {{ .Release.Name }}-mongo
+    io.kompose.service: {{ .Values.serviceName }}-mongo
+  name: {{ .Values.serviceName }}-mongo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: {{ .Release.Name }}-mongo
+      io.kompose.service: {{ .Values.serviceName }}-mongo
   strategy: {}
   template:
     metadata:
@@ -20,11 +20,11 @@ spec:
         kompose.version: 1.28.0 (c4137012e)
       labels:
 
-        io.kompose.service: {{ .Release.Name }}-mongo
+        io.kompose.service: {{ .Values.serviceName }}-mongo
     spec:
       containers:
         - image: mongo
-          name: {{ .Release.Name }}-mongo
+          name: {{ .Values.serviceName }}-mongo
           ports:
             - containerPort: 27017
           resources: {}

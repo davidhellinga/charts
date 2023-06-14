@@ -32,17 +32,17 @@ spec:
               value: {{ .Values.rabbitmq.host }}
             - name: ROOT_CERT
               value: /cert/root.crt
-            - name: YUGABYE_HOST
+            - name: YUGABYTE_HOST
               valueFrom:
                 secretKeyRef:
                   key: host
                   name: {{ .Values.serviceName }}-yugabyte
-            - name: YUGABYE_PASSWORD
+            - name: YUGABYTE_PASSWORD
               valueFrom:
                 secretKeyRef:
                   key: username
                   name: {{ .Values.serviceName }}-yugabyte
-            - name: YUGABYE_USER
+            - name: YUGABYTE_USER
               valueFrom:
                 secretKeyRef:
                   key: password

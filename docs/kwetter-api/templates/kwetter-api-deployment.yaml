@@ -25,7 +25,7 @@ spec:
       containers:
         - env:
             - name: ASPNETCORE_ENVIRONMENT
-              value: {{ .Values }}
+              value: {{ .Values.environment }}
             - name: CACHE_URI
               value: https://{{ .Values.serviceName }}/
             - name: Keycloak__RolesSource
@@ -33,7 +33,7 @@ spec:
             - name: Keycloak__auth-server-url
               value: {{ .Values.keycloak.authServerUrl }}
             - name: Keycloak__confidential-port
-              value: {{ .Values.keycloak.confidentialPort }}
+              value: {{ .Values.keycloak.confidentialPort | quote}}
             - name: Keycloak__credentials__secret
               valueFrom:
                 secretKeyRef:

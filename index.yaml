@@ -3,9 +3,9 @@ entries:
   cache-service:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T14:41:24.402429325+02:00"
+    created: "2023-06-14T14:58:00.458789417+02:00"
     description: The Cache Service for Kwetter
-    digest: 59522f2f947abac431f781be410c809cdc773038d60b92f8daf20bb22a0653e5
+    digest: 5deaabb85c013da0b9adc737fca1526683c392f846d6f89e10ba5d71225265f5
     name: cache-service
     type: application
     urls:
@@ -14,9 +14,9 @@ entries:
   content-service:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T14:41:24.40254383+02:00"
+    created: "2023-06-14T14:58:00.458940534+02:00"
     description: Content link service for Kwetter
-    digest: 3fd284098aea2f19428d9fe8b7cca81b3a3647f9ccc5b2c3e3a67547c3387e52
+    digest: ac517414c90d8649cc5036cb71ef94188db5e7f30fc4b44aa3a633d7fcdeb25c
     name: content-service
     type: application
     urls:
@@ -25,9 +25,9 @@ entries:
   kweeter:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T14:41:24.402860599+02:00"
+    created: "2023-06-14T14:58:00.459089256+02:00"
     description: Kweeter write orchestrator for Kwetter
-    digest: 73728ef94d96cf13b893b5b28e857995d70a039625b2b51eaab8ded2a5b36f47
+    digest: fa47b93f1326d253d5888c8e97f02cb29dc03ebe868fc2acbac4d6f006e10702
     name: kweeter
     type: application
     urls:
@@ -36,9 +36,9 @@ entries:
   kwetter-api:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T14:41:24.403268988+02:00"
+    created: "2023-06-14T14:58:00.459226955+02:00"
     description: Gateway API for Kwetter
-    digest: 17e1818f5710f68235da462bf31e947adc1fb531775926939e9d5e23193d0ba6
+    digest: 1c7022c1b411a5aa81d4d2c296315926208ea87d00890c60fdc41e4610bd0ead
     name: kwetter-api
     type: application
     urls:
@@ -47,9 +47,9 @@ entries:
   kwetter-data-service:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T14:41:24.403405571+02:00"
+    created: "2023-06-14T14:58:00.459344393+02:00"
     description: Kweet data service for Kwetter
-    digest: f8610200e7895e4f15b99e66315454b458631c274fbff0e0b8b47d66856498b7
+    digest: 7d5523fdceb7342acb91f735d3f5e18418e56a6d804ca757d5195b63bd1d7772
     name: kwetter-data-service
     type: application
     urls:
@@ -58,9 +58,9 @@ entries:
   kwetter-web:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T14:41:24.403502145+02:00"
+    created: "2023-06-14T14:58:00.459440705+02:00"
     description: Kwetter, the website
-    digest: 37ab53fa0d0e7b224bfa33b43b5326cc7533090c33e06eab444beef9ac32704d
+    digest: 7aaf6fb329a6bbd49be2abace21eb2b22a7d8701336c63793bccb30711b240d8
     name: kwetter-web
     type: application
     urls:
@@ -69,9 +69,9 @@ entries:
   mention-service:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T14:41:24.403617907+02:00"
+    created: "2023-06-14T14:58:00.459555895+02:00"
     description: Mention service for Kwetter
-    digest: b1508f14ce151f61bb593d51656981fe4eedc8b68f24a2e12283977d04473cd4
+    digest: 4324e5fdfff379fad3984d2cd2c71ea4120852369c0cb1175c16a4455c174a01
     name: mention-service
     type: application
     urls:
@@ -80,9 +80,9 @@ entries:
   metadata-service:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T14:41:24.403733427+02:00"
+    created: "2023-06-14T14:58:00.459667776+02:00"
     description: Metadata service for Kwetter
-    digest: ef845555b224e5ed941a32bc4985738799d14903660d4c692d97cf0899ae19f2
+    digest: 359a3e7ad2d4f3a9a1170bee094be3379c9929fa0753a52d1770686e2783d68e
     name: metadata-service
     type: application
     urls:
@@ -91,12 +91,12 @@ entries:
   tag-service:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T14:41:24.403846212+02:00"
+    created: "2023-06-14T14:58:00.459775113+02:00"
     description: Tag service for Kwetter
-    digest: 8c1445e8f26590d2062bff4576a23a12bf48e2e4ca5c9b95615c2f638a6d5dc4
+    digest: 51fa86e07a325f435cfe39cc45e8fd04813f5fdb13a85e0dc7afdda8cbff9077
     name: tag-service
     type: application
     urls:
     - https://davidhellinga.github.io/charts/docs/tag-service-0.1.0.tgz
     version: 0.1.0
-generated: "2023-06-14T14:41:24.402188322+02:00"
+generated: "2023-06-14T14:58:00.458517858+02:00"

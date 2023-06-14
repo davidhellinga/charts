@@ -46,7 +46,7 @@ spec:
             - name: Keycloak__ssl-required
               value: {{ .Values.keycloak.sslRequired }}
             - name: Keycloak__verify-token-audience
-              value: {{ .Values.keycloak.verifyTokenAudience }}
+              value: {{ .Values.keycloak.verifyTokenAudience | quote }}
             - name: RABBITMQ_HOST
               value: {{ .Values.rabbitmq.host }}
           image: fontyssa/kwetter-api

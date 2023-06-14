@@ -12,7 +12,7 @@ spec:
   selector:
     matchLabels:
       io.kompose.service: {{ .Values.serviceName }}
-  strategy: {}
+  strategy: { }
   template:
     metadata:
       annotations:
@@ -27,13 +27,13 @@ spec:
           ports:
             - containerPort: 443
             - containerPort: 80
-          resources: {}
+          resources: { }
+      volumeMounts:
+        - mountPath: /etc/acme
+          name: web-ssl
+          readOnly: true
+      volumes:
+        - name: web-ssl
+          secret:
+            secretName: web-ssl
       restartPolicy: Always
-  volumeMounts:
-    - mountPath: /etc/acme
-      name: web-ssl
-      readOnly: true
-  volumes:
-    - name: web-ssl
-      secret:
-        secretName: web-ssl

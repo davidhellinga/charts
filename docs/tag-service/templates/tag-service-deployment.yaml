@@ -32,6 +32,10 @@ spec:
               value: {{ .Values.rabbitmq.host }}
             - name: ROOT_CERT
               value: /cert/root.crt
+            - name: YUGA
+              value: {{ .Values.yugabyte.useYugabyte }}
+            - name: CONNECTION_STRING
+              value: "Server={{ .Values.serviceName }}-db;Database={{ .Values.serviceName }};Username=postgres;Password=postgres;"
             - name: YUGABYTE_HOST
               valueFrom:
                 secretKeyRef:

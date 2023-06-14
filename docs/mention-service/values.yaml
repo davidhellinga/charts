@@ -12,6 +12,7 @@ yugabyte:
   host: ""
   user: ""
   password: ""
+  useYugabyte: false
 
 # Service bus config
 rabbitmq:

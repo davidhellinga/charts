@@ -27,7 +27,7 @@ spec:
             - name: ASPNETCORE_ENVIRONMENT
               value: {{ .Values.environment }}
             - name: CACHE_URI
-              value: https://{{ .Values.serviceName }}/
+              value: {{ .Values.cacheUri }}
             - name: Keycloak__RolesSource
               value: {{ .Values.keycloak.rolesSource }}
             - name: Keycloak__auth-server-url

@@ -11,6 +11,8 @@ environment: Development
 rabbitmq:
   host: rabbitmq
 
+cacheUri: https://cache-service/
+
 # Keycloak config for authentication
 keycloak:
   authServerUrl: http://keycloak:8080/

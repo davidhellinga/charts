@@ -29,3 +29,11 @@ spec:
             - containerPort: 80
           resources: {}
       restartPolicy: Always
+  volumeMounts:
+    - mountPath: /etc/acme
+      name: web-ssl
+      readOnly: true
+  volumes:
+    - name: web-ssl
+      secret:
+        secretName: web-ssl

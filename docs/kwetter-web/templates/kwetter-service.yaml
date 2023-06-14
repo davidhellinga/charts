@@ -4,6 +4,7 @@ metadata:
   annotations:
     kompose.cmd: kompose convert -c -f docker-compose.yml -o kweeter
     kompose.version: 1.28.0 (c4137012e)
+    cloud.google.com/backend-config: '{"default": "kwetter-web-healthcheck"}'
   labels:
     io.kompose.service: {{ .Values.serviceName }}
   name: {{ .Values.serviceName }}

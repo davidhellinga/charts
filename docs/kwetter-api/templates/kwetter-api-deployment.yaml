@@ -44,7 +44,7 @@ spec:
             - name: Keycloak__resource
               value: {{ .Values.keycloak.resource }}
             - name: Keycloak__ssl-required
-              value: {{ .Values.keycloak.sslRequired }}
+              value: {{ .Values.keycloak.sslRequired | quote  }}
             - name: Keycloak__verify-token-audience
               value: {{ .Values.keycloak.verifyTokenAudience | quote }}
             - name: RABBITMQ_HOST

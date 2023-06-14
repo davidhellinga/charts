@@ -19,6 +19,6 @@ keycloak:
   credentials:
     secret: ""
   confidentialPort: "0"
-  sslRequired: none
+  sslRequired: "none"
   verifyTokenAudience: "true"
   rolesSource: Realm

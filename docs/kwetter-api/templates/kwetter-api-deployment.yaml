@@ -52,6 +52,6 @@ spec:
           image: fontyssa/kwetter-api
           name: {{ .Values.serviceName }}
           ports:
-            - containerPort: 8080
+            - containerPort: 80
           resources: { }
       restartPolicy: Always

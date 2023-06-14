@@ -3,9 +3,9 @@ entries:
   cache-service:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T21:38:19.353303832+02:00"
+    created: "2023-06-14T22:25:32.97623204+02:00"
     description: The Cache Service for Kwetter
-    digest: 69c4b0a713650c20c10848324861eeaa6eb4ae92e8a6280e7f0b217457d3bf9f
+    digest: 55a7bc8a0a7eab6b28a2d92d3d19a4248f295b7c91875ea829fb80afbe84e6df
     name: cache-service
     type: application
     urls:
@@ -14,7 +14,7 @@ entries:
   content-service:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T21:38:19.353545571+02:00"
+    created: "2023-06-14T22:25:32.976441016+02:00"
     description: Content link service for Kwetter
     digest: da83ad49152176d482a6cdad49b03df9eb58b9e2f4097517b5c607f33b9ea8f3
     name: content-service
@@ -25,7 +25,7 @@ entries:
   kweeter:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T21:38:19.35377498+02:00"
+    created: "2023-06-14T22:25:32.97665347+02:00"
     description: Kweeter write orchestrator for Kwetter
     digest: 04093508a3b86a6301d5adb52d9a8b4f4271e0a33f5dd23ebf0a492c97611733
     name: kweeter
@@ -36,7 +36,7 @@ entries:
   kwetter-api:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T21:38:19.354233663+02:00"
+    created: "2023-06-14T22:25:32.977061088+02:00"
     description: Gateway API for Kwetter
     digest: c37fda1ce2f984e677a7279589fc2fac048c65f4af3c35f68f866bbf577b9ca8
     name: kwetter-api
@@ -46,7 +46,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T21:38:19.354005972+02:00"
+    created: "2023-06-14T22:25:32.976850645+02:00"
     description: Gateway API for Kwetter
     digest: 2e42941a9ba1d9dc213a4c30b1edcbea2d237ee5f30cf5ea394cff8176fffce7
     name: kwetter-api
@@ -57,7 +57,7 @@ entries:
   kwetter-data-service:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T21:38:19.354471163+02:00"
+    created: "2023-06-14T22:25:32.977250522+02:00"
     description: Kweet data service for Kwetter
     digest: 23e647bc36169c3c0b8a7352f6596795bab3fe8e1e2957351de42790d8948b38
     name: kwetter-data-service
@@ -68,7 +68,7 @@ entries:
   kwetter-web:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T21:38:19.35479516+02:00"
+    created: "2023-06-14T22:25:32.977549797+02:00"
     description: Kwetter, the website
     digest: 648111a627fc24073f6025e8f0d03cd4519fe2db2785b2fc7aef0910ca323d65
     name: kwetter-web
@@ -78,7 +78,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T21:38:19.354623372+02:00"
+    created: "2023-06-14T22:25:32.977398183+02:00"
     description: Kwetter, the website
     digest: a6dcd4d7931fb3dfc2225d7b798eb5e63374dc501a44173ac7ca06e25df6c0e6
     name: kwetter-web
@@ -89,7 +89,7 @@ entries:
   mention-service:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T21:38:19.355021738+02:00"
+    created: "2023-06-14T22:25:32.977759299+02:00"
     description: Mention service for Kwetter
     digest: fdd48302096e7514529ff5898aaec947b69ffcb38dbb5cdc37b50db77df1ca69
     name: mention-service
@@ -100,7 +100,7 @@ entries:
   metadata-service:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T21:38:19.355249371+02:00"
+    created: "2023-06-14T22:25:32.977984597+02:00"
     description: Metadata service for Kwetter
     digest: 79774bf5c8ab6bb12b6ea80243a3e9fae9ade92ba30ff21626640bdadf299303
     name: metadata-service
@@ -111,7 +111,7 @@ entries:
   tag-service:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T21:38:19.355458709+02:00"
+    created: "2023-06-14T22:25:32.978194897+02:00"
     description: Tag service for Kwetter
     digest: d92942e63702a37093cbcf7038d1291724f74502f08b2a2b41332c246e57edcc
     name: tag-service
@@ -119,4 +119,4 @@ entries:
     urls:
     - https://davidhellinga.github.io/charts/docs/tag-service-0.1.2.tgz
     version: 0.1.2
-generated: "2023-06-14T21:38:19.352888288+02:00"
+generated: "2023-06-14T22:25:32.975870557+02:00"

@@ -43,5 +43,8 @@ spec:
               value: {{ .Values.rabbitmq.virtualHost }}
           image: fontyssa/kweeter
           name: {{ .Values.serviceName }}
-          resources: { }
+          resources:
+            requests:
+              memory: {{.Values.resources.memory | quote }}
+              cpu: {{.Values.resources.cpu | quote }}
       restartPolicy: Always

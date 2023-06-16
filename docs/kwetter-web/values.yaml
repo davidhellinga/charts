@@ -3,3 +3,7 @@
 # Declare variables to be passed into your templates.
 
 serviceName: kwetter-web
+
+resources:
+  memory: 500m
+  cpu: 250m

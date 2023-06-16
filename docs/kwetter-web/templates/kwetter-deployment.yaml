@@ -27,7 +27,10 @@ spec:
           ports:
             - containerPort: 443
             - containerPort: 80
-          resources: { }
+          resources:
+            requests:
+              memory: {{.Values.resources.memory | quote }}
+              cpu: {{.Values.resources.cpu | quote }}
           volumeMounts:
             - mountPath: /etc/acme
               name: web-ssl

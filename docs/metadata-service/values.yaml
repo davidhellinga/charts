@@ -7,6 +7,9 @@ serviceName: metadata-service
 # .NET environment
 environment: Development
 
+resources:
+  memory: 500m
+  cpu: 250m
 # Configuration for Yugabyte connection
 yugabyte:
   host: ""

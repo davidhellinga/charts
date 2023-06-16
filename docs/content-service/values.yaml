@@ -1,6 +1,9 @@
 # .NET environment
 environment: Development
 
+resources:
+  memory: 500m
+  cpu: 250m
 serviceName: content-service
 
 # Configuration for Yugabyte connection

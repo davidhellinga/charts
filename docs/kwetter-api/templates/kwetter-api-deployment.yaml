@@ -53,5 +53,8 @@ spec:
           name: {{ .Values.serviceName }}
           ports:
             - containerPort: 80
-          resources: { }
+          resources:
+            requests:
+              memory: {{.Values.resources.memory | quote }}
+              cpu: {{.Values.resources.cpu | quote }}
       restartPolicy: Always

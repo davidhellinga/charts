@@ -7,6 +7,9 @@ serviceName: kweeter
 # .NET environment
 environment: Development
 
+resources:
+  memory: 500m
+  cpu: 250m
 # Service bus config
 rabbitmq:
   host: rabbitmq

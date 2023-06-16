@@ -53,5 +53,8 @@ spec:
                   name: {{ .Values.serviceName }}-yugabyte
           image: fontyssa/kwetter-content-service
           name: {{ .Values.serviceName }}
-          resources: { }
+          resources:
+            requests:
+              memory: {{.Values.resources.memory | quote }}
+              cpu: {{.Values.resources.cpu | quote }}
       restartPolicy: Always

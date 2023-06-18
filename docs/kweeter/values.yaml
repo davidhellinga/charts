@@ -14,8 +14,8 @@ resources:
 rabbitmq:
   host: rabbitmq
   port: 5672
-  user: guest
-  password: guest
+  user: rabbit
+  password: rabbit
   virtualHost: /
 
 mongo:

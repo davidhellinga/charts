@@ -48,7 +48,15 @@ spec:
             - name: Keycloak__verify-token-audience
               value: {{ .Values.keycloak.verifyTokenAudience | quote }}
             - name: RABBITMQ_HOST
-              value: {{ .Values.rabbitmq.host }}
+              value: {{.Values.rabbitmq.host}}
+            - name: RABBITMQ_PORT
+              value: {{.Values.rabbitmq.port | quote}}
+            - name: RABBITMQ_USERNAME
+              value: {{.Values.rabbitmq.user}}
+            - name: RABBITMQ_PASSWORD
+              value: {{.Values.rabbitmq.password}}
+            - name: RABBITMQ_VIRTUAL_HOST
+              value: {{.Values.rabbitmq.virtualHost}}
           image: fontyssa/kwetter-api
           name: {{ .Values.serviceName }}
           ports:

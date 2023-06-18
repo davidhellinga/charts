@@ -16,3 +16,7 @@ yugabyte:
 # Service bus config
 rabbitmq:
   host: rabbitmq
+  port: "5672"
+  user: rabbit
+  password: rabbit
+  virtualHost: /

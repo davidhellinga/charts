@@ -33,7 +33,15 @@ spec:
             - name: MONGO_COLLECTION
               value: {{ .Values.mongo.collection }}
             - name: RABBITMQ_HOST
-              value: {{ .Values.rabbitmq.host }}
+              value: {{.Values.rabbitmq.host}}
+            - name: RABBITMQ_PORT
+              value: {{.Values.rabbitmq.port | quote}}
+            - name: RABBITMQ_USERNAME
+              value: {{.Values.rabbitmq.user}}
+            - name: RABBITMQ_PASSWORD
+              value: {{.Values.rabbitmq.password}}
+            - name: RABBITMQ_VIRTUAL_HOST
+              value: {{.Values.rabbitmq.virtualHost}}
             - name: REDIS_CONFIG
               value: {{ .Values.serviceName }}-redis
             - name: REDIS_INSTANCE
